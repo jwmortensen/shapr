@@ -52,20 +52,20 @@ feature_combinations <- function(m, exact = TRUE, n_combinations = 200, weight_z
     )
   }
 
-  # Not supported for m > 30
-  if (m > 30 & m_group == 0) {
+  # Not supported for m > 40
+  if (m > 40 & m_group == 0) {
     stop(
       paste0(
-        "Currently we are not supporting cases where the number of features is greater than 30\n",
+        "Currently we are not supporting cases where the number of features is greater than 40\n",
         "for feature-wise Shapley values."
       )
     )
   }
-  if (m_group > 30) {
+  if (m_group > 40) {
     stop(
       paste0(
         "For computational reasons, we are currently not supporting group-wise Shapley values \n",
-        "for more than 30 groups. Please reduce the number of groups."
+        "for more than 40 groups. Please reduce the number of groups."
       )
     )
   }
